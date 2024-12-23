@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher Encryptor/Decryptor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Caesar Cipher Tool</h1>
+      <p>Encrypt or decrypt your text files using Caesar Cipher.</p>
+
+      <div>
+        <label for="fileInput">Choose a file:</label>
+        <input type="file" id="fileInput" accept=".txt" />
+      </div>
+
+      <div>
+        <label for="keyInput">Enter a key:</label>
+        <input
+          type="number"
+          id="keyInput"
+          min="1"
+          placeholder="Enter key (e.g., 3)"
+        />
+        <button id="generateKeyBtn">Generate Random Key</button>
+      </div>
+
+      <div class="toggle">
+        <label for="modeEncrypt">Encrypt</label>
+        <input
+          type="radio"
+          id="modeEncrypt"
+          name="mode"
+          value="encrypt"
+          checked
+        />
+        <label for="modeDecrypt">Decrypt</label>
+        <input type="radio" id="modeDecrypt" name="mode" value="decrypt" />
+      </div>
+
+      <div id="progressBarContainer">
+        <div id="progressBar"></div>
+      </div>
+
+      <button id="processBtn">Process File</button>
+
+      <p id="outputMessage"></p>
+      <div class="preview" id="preview"></div>
+      <a id="downloadLink" style="display: none">Download Processed File</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
