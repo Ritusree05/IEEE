@@ -34,6 +34,27 @@ p {
   text-align: center;
 }
 
+/* Drag-and-Drop Zone */
+.drag-drop-zone {
+  border: 2px dashed #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.drag-drop-zone:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.drag-drop-zone.drag-over {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+/* Input and buttons */
 .container input[type="file"],
 .container input[type="number"],
 .container button {
@@ -129,7 +150,7 @@ p {
   background: #218838;
 }
 
-/* responsiveness */
+/* Mobile responsiveness */
 @media (max-width: 600px) {
   .container {
     padding: 20px;
